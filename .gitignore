@@ -1,0 +1,7 @@
+# Composer
+/vendor
+
+# Dotnev
+.env
+*.env
+!.example.env

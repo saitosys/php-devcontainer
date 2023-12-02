@@ -1,0 +1,55 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
+{
+    "name": "DevOpsUbuntu",
+    "userEnvProbe": "loginInteractiveShell",
+    "image": "mcr.microsoft.com/vscode/devcontainers/base:0-ubuntu-22.04",
+    //"build": {
+    //  "dockerfile": "Dockerfile",
+      // Update 'STACK_ID' to pick an heroku stack version https://devcenter.heroku.com/articles/stack#stack-support-details
+    //  "args": { "STACK_ID": "22" }
+    //},
+    "mounts": ["source=brew,target=/home/linuxbrew,type=volume,consistency=cached"],
+    "features": {
+      "ghcr.io/devcontainers/features/php:1": {
+        "version": "8.2",
+        "installComposer": "true"
+      },
+      "ghcr.io/devcontainers/features/node:1": {
+        "version": "lts"
+      },
+      "ghcr.io/meaningful-ooo/devcontainer-features/homebrew:2": {},
+      "ghcr.io/devcontainers-contrib/features/heroku-cli:1": {}
+    },
+
+    // Features to add to the dev container. More info: https://containers.dev/features.
+    // "features": {},
+
+    // Use 'forwardPorts' to make a list of ports inside the container available locally.
+    // "forwardPorts": [],
+
+    // Use 'postCreateCommand' to run commands after the container is created.
+    // "postCreateCommand": "uname -a",
+
+    // Configure tool-specific properties.
+    "customizations": {
+      "vscode": {
+        "settings": {
+          //"dotfiles.targetPath": "~/.dotfiles",
+          //"dotfiles.repository": "https://github.com/hvg-dev/dotfiles.git",
+          "terminal.integrated.defaultProfile.linux": "zsh"
+        },
+        "extensions": [
+          "timonwong.shellcheck",
+          "ms-azuretools.vscode-docker",
+          "ms-kubernetes-tools.vscode-kubernetes-tools",
+          "editorconfig.editorconfig",
+          "vscode-icons-team.vscode-icons",
+          "xdebug.php-pack"
+        ]
+      }
+    }
+
+    // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+    // "remoteUser": "root"
+  }

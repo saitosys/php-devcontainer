@@ -1,0 +1,30 @@
+{
+  "name": "vscode/php",
+  "authors": [
+    {
+      "name": "felegy",
+      "email": "felegy@hvg.hu"
+    }
+  ],
+  "require": {
+    "php": ">=7.4 <8.3",
+    "ext-gd": "*",
+    "ext-redis": "*",
+    "ext-mbstring": "*",
+    "ext-soap": "*",
+    "ext-exif": "*",
+    "ext-imagick": "*",
+    "ext-intl": "*",
+    "composer/installers": "^2.2",
+    "vlucas/phpdotenv": "^5.5",
+    "oscarotero/env": "^2.1"
+  },
+  "require-dev": {
+    "heroku/heroku-buildpack-php": "*"
+  },
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true
+    }
+  }
+}
